@@ -299,10 +299,11 @@ class _ReservationBottomActionBar extends StatelessWidget {
   }) {
     return Container(
       height: 60,
-      decoration: BoxDecoration(
-          border: Border(
-              bottom:
-                  BorderSide(color: CupertinoColors.extraLightBackgroundGray))),
+      decoration: const BoxDecoration(
+        border: Border(
+          bottom: BorderSide(color: CupertinoColors.extraLightBackgroundGray),
+        ),
+      ),
       child: Row(
         children: [
           Text(title),
@@ -354,7 +355,10 @@ class ReservationTicketTimeList extends StatelessWidget {
               crossAxisSpacing: itemGapMargin, //수직 Padding
             ),
             padding: const EdgeInsets.only(
-                left: pageSideMargin, right: pageSideMargin, bottom: 30.0),
+              left: pageSideMargin,
+              right: pageSideMargin,
+              bottom: 30.0,
+            ),
             itemCount: selectedTicket?.timeList.length ?? 0,
             itemBuilder: (context, index) {
               final item = selectedTicket?.timeList[index];
